@@ -1,0 +1,24 @@
+{
+  "Goals": [
+    {
+      "id": 1,
+      "name": "Project Proposal",
+      "completed": true,
+      "totalTime": 50,
+      "dueDate": "Current 10/25/2021",
+      "urgency": "High",
+      "notes": "We decided on App to make",
+      "category": "Work"
+    },
+    {
+      "id": 2,
+      "name": "Go for a walk",
+      "completed": true,
+      "totalTime": 25,
+      "dueDate": "Current 10/25/2021",
+      "urgency": "Medium",
+      "notes": "Went on a walk",
+      "category": "Leisure"
+    }
+  ]
+}
