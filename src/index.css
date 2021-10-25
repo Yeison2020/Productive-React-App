@@ -1,0 +1,14 @@
+
+#header {
+    text-align: center;
+    margin: 50px;
+}
+
+.goalListItem {
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+    box-sizing: content-box;
+    width: 30%;
+    border: solid blue .5rem;
+    padding: 1rem;
+}
