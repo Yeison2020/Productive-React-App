@@ -19,7 +19,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div id="BG">
       <div id="header">
         <h1>Productive</h1>
         <h3>Making you more productive</h3>

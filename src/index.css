@@ -1,4 +1,14 @@
 
+:root {
+    --gradient: linear-gradient(
+        45deg,
+        #da6a71,
+        #f58d67,
+        #f5f588
+        
+    );
+}
+
 #header {
     text-align: center;
     margin: 50px;
@@ -11,4 +21,15 @@
     width: 30%;
     border: solid blue .5rem;
     padding: 1rem;
+}
+
+#BG {
+    background-image: var(--gradient);
+    background-size: 200%;
+    animation: bg-animation 5s infinite alternate;
+}
+
+@keyframes bg-animation {
+    0% {background-position: left;}
+    100% {background-position: right;}
 }
