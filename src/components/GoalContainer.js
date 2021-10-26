@@ -2,7 +2,7 @@ import GoalList from "./GoalList"
 
 function GoalContainer ({goals}) {
     return(
-        <div>
+        <div id="grid-container">
             {goals.map(goal => {
                 return (
                 
