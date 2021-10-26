@@ -16,7 +16,10 @@ function Menu({ handleSearch, goals, handleDataCard }) {
 
   return (
     <div id="menu">
-      <form onSubmit={(e) => handleSearch(e, valueInput)}>
+      <form
+        onSubmit={(e) => handleSearch(e, valueInput)}
+        onChange={(e) => handleSearch(e, valueInput)}
+      >
         <input
           type="text"
           name="search"
@@ -27,8 +30,11 @@ function Menu({ handleSearch, goals, handleDataCard }) {
       </form>
       <select name="filter" onChange={(e) => handleSelecterCategory(e)}>
         <option value="filter">Filter</option>
-        <option value="Urgency">High Urgency</option>
+        <option value="Completed">Completed</option>
         <option value="NoCompleted">No Completed</option>
+        <option value="High">High Urgency</option>
+        <option value="Medium">Medium Urgency</option>
+        <option value="Low">Low Urgency</option>
       </select>
     </div>
   );

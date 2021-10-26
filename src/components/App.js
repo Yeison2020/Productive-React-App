@@ -14,8 +14,6 @@ const App = () => {
     setSearch(value);
   };
 
-  console.log(search);
-
   useEffect(() => {
     fetch("http://localhost:3000/Goals")
       .then((r) => r.json())
@@ -50,13 +48,33 @@ const App = () => {
   };
   const filterGoals = () => {
     switch (category) {
-      case "Urgency":
+      case "filter":
+        return goals;
+      case "High":
         return goals.filter((card) => {
-          if (card.urgency === "high") {
+          if (card.urgency === "High") {
+            return true;
+          }
+        });
+      case "Medium":
+        return goals.filter((card) => {
+          if (card.urgency === "Medium") {
+            return true;
+          }
+        });
+      case "Low":
+        return goals.filter((card) => {
+          if (card.urgency === "Low") {
             return true;
           }
         });
 
+      case "Completed":
+        return goals.filter((card) => {
+          if (card.completed === true) {
+            return true;
+          }
+        });
       case "NoCompleted":
         return goals.filter((card) => {
           if (card.completed === false) {
@@ -66,6 +84,38 @@ const App = () => {
 
       default:
         return goals;
+    }
+  };
+
+  const handleDataUser = () => {
+    if (search.length > 0 && category === "") {
+      return goals.filter((card) => {
+        if (card.name.toLowerCase().includes(search.toLowerCase())) {
+          return true;
+        }
+      });
+    }
+    if (search.length > 0 && category === "filter") {
+      return goals.filter((card) => {
+        if (card.name.toLowerCase().includes(search.toLowerCase())) {
+          return true;
+        }
+      });
+    }
+    if (search.length < 0 && category !== "") {
+      return filterGoals();
+    }
+    if (search.length > 0 && category !== "") {
+      return goals.filter((card) => {
+        if (card.name.toLowerCase().includes(search.toLowerCase())) {
+          return true;
+        }
+      });
+    }
+    if (search === "" && category === "filter") {
+      return goals;
+    } else {
+      return filterGoals();
     }
   };
 
@@ -85,7 +135,7 @@ const App = () => {
         goals={goals}
         handleDataCard={handleDataCard}
       />
-      <GoalContainer goals={filterGoals()} />
+      <GoalContainer goals={handleDataUser()} />
     </div>
   );
 };
