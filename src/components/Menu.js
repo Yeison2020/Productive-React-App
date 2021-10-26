@@ -1,13 +1,32 @@
+import { useState } from "react";
 
-function Menu() {
-    return (
-        <div id="menu">
-            <h3>Filter: completed or current</h3>
-            <h3>Filter: total time</h3>
-            <h3>Filter: by urgency</h3>
-            <h3>Filter: by category</h3>
-        </div>
-    )
+function Menu({ handleSearch, goals }) {
+  const [valueInput, setValueInput] = useState("");
+
+  const handleValueInput = (e) => {
+    setValueInput(e.target.value);
+  };
+
+  return (
+    <div id="menu">
+      <form onSubmit={(e) => handleSearch(e, valueInput)}>
+        <input
+          type="text"
+          name="search"
+          value={valueInput}
+          placeholder="Search Cards"
+          onChange={(e) => handleValueInput(e)}
+        />
+      </form>
+      <select name="filter" onChange={() => console.log("hello")}>
+        <option value="All">Current Cards</option>
+        <option value="Produce">Urgency</option>
+        <option value="Dairy">Total Time</option>
+        <option value="Dessert">Completed</option>
+        <option value="Dessert">No Completed</option>
+      </select>
+    </div>
+  );
 }
 
-export default Menu
+export default Menu;
