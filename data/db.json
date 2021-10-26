@@ -56,7 +56,7 @@
       "completed": false,
       "totalTime": 1000,
       "dueDate": "none",
-      "urgency": "high",
+      "urgency": "High",
       "notes": "Meditate daily for 25 minutes",
       "category": "Wellness"
     }
