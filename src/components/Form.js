@@ -70,7 +70,7 @@ function Form ({handleAddGoal}) {
              onChange={handleChange} >
                  <option value="high">high</option>
                  <option value="medium">medium</option>
-                 <option value="low">medium</option>
+                 <option value="low">low</option>
              </select>
              
              <input

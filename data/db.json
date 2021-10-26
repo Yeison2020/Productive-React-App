@@ -6,9 +6,9 @@
       "completed": true,
       "totalTime": 50,
       "dueDate": "Current 10/25/2021",
-      "urgency": "High",
+      "urgency": "high",
       "notes": "We decided on App to make",
-      "category": "Work"
+      "category": "work"
     },
     {
       "id": 2,
@@ -16,9 +16,9 @@
       "completed": true,
       "totalTime": 25,
       "dueDate": "Current 10/25/2021",
-      "urgency": "Medium",
+      "urgency": "medium",
       "notes": "Went on a walk",
-      "category": "Leisure"
+      "category": "leisure"
     },
     {
       "id": 3,
@@ -26,9 +26,9 @@
       "completed": false,
       "totalTime": 0,
       "dueDate": "none",
-      "urgency": "Medium",
+      "urgency": "medium",
       "notes": "track how much time you spend working out",
-      "category": "Fitness"
+      "category": "fitness"
     },
     {
       "id": 4,
@@ -36,9 +36,9 @@
       "completed": false,
       "totalTime": 100,
       "dueDate": "1/10/2022",
-      "urgency": "Medium",
+      "urgency": "medium",
       "notes": "Read the book for your book club",
-      "category": "Hobbies"
+      "category": "hobbies"
     },
     {
       "id": 5,
@@ -46,9 +46,9 @@
       "completed": false,
       "totalTime": 275,
       "dueDate": "none",
-      "urgency": "Low",
+      "urgency": "low",
       "notes": "Try and practice the piano 3 times a week for 1 hour (2 pomodoros). Current goal is to learn Moonlight Sonata",
-      "category": "Hobbies"
+      "category": "hobbies"
     },
     {
       "id": 6,
@@ -56,9 +56,9 @@
       "completed": false,
       "totalTime": 1000,
       "dueDate": "none",
-      "urgency": "High",
+      "urgency": "high",
       "notes": "Meditate daily for 25 minutes",
-      "category": "Wellness"
+      "category": "wellness"
     },
     {
       "name": "finish form",
@@ -69,26 +69,6 @@
       "notes": "finish the form that i am typing into!",
       "category": "",
       "id": 7
-    },
-    {
-      "name": "finish form",
-      "completed": "",
-      "totalTime": "50",
-      "dueDate": "10/26/2021",
-      "urgency": "",
-      "notes": "finish the form that i am typing into!",
-      "category": "",
-      "id": 8
-    },
-    {
-      "name": "hey",
-      "completed": "",
-      "totalTime": "50",
-      "dueDate": "10/26/2021",
-      "urgency": "",
-      "notes": "asdfghjk",
-      "category": "",
-      "id": 9
     }
   ]
 }

@@ -43,6 +43,29 @@ const App = () => {
 
   }
 
+  function handleDelete(id) {
+    console.log(id);
+    let result = window.confirm("are you sure you want to delete?")
+    if (result) {
+      handleDeleteConfirmed(id)
+    } 
+  }
+
+  function handleDeleteConfirmed(id) {
+    fetch(`http://localhost:3000/goals/${id}`, {
+        method: 'DELETE'
+      })
+      .then(()=> {
+        const filteredGoals = goals.filter(goal => goal.id !== id)
+        setGoals(filteredGoals)
+      })
+  }
+
+
+
+
+
+
   const handleDataCard = (data) => {
     setCategory(data);
   };
@@ -52,19 +75,19 @@ const App = () => {
         return goals;
       case "High":
         return goals.filter((card) => {
-          if (card.urgency === "High") {
+          if (card.urgency === "high") {
             return true;
           }
         });
       case "Medium":
         return goals.filter((card) => {
-          if (card.urgency === "Medium") {
+          if (card.urgency === "medium") {
             return true;
           }
         });
       case "Low":
         return goals.filter((card) => {
-          if (card.urgency === "Low") {
+          if (card.urgency === "low") {
             return true;
           }
         });
@@ -135,7 +158,7 @@ const App = () => {
         goals={goals}
         handleDataCard={handleDataCard}
       />
-      <GoalContainer goals={handleDataUser()} />
+      <GoalContainer handleDelete={handleDelete} goals={handleDataUser()} />
     </div>
   );
 };
