@@ -1,11 +1,18 @@
 import { useState } from "react";
 
-function Menu({ handleSearch, goals }) {
+function Menu({ handleSearch, goals, handleDataCard }) {
   const [valueInput, setValueInput] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   const handleValueInput = (e) => {
     setValueInput(e.target.value);
   };
+
+  const handleSelecterCategory = (e) => {
+    setSelectedCategory(e.target.value);
+  };
+
+  handleDataCard(selectedCategory);
 
   return (
     <div id="menu">
@@ -18,12 +25,10 @@ function Menu({ handleSearch, goals }) {
           onChange={(e) => handleValueInput(e)}
         />
       </form>
-      <select name="filter" onChange={() => console.log("hello")}>
-        <option value="All">Current Cards</option>
-        <option value="Produce">Urgency</option>
-        <option value="Dairy">Total Time</option>
-        <option value="Dessert">Completed</option>
-        <option value="Dessert">No Completed</option>
+      <select name="filter" onChange={(e) => handleSelecterCategory(e)}>
+        <option value="Urgency">Filter</option>
+        <option value="Urgency">High Urgency</option>
+        <option value="NoCompleted">No Completed</option>
       </select>
     </div>
   );
