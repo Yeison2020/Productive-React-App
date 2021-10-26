@@ -1,17 +1,41 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+
+* {
+    font-family: Roboto;
+}
+
 :root {
+
     --gradient: linear-gradient(
         45deg,
-        #da6a71,
-        #f58d67,
-        #f5f588
-        
+        #e3e37d,
+
+        #de9696,
+
+        #d7a2d3,
+
+        #ffffff
+   
     );
 }
 
 #header {
     text-align: center;
-    margin: 50px;
+    margin: 0px;
+    padding-top: 2rem;
+}
+
+#menu {
+    margin-left: 0.25rem;
+    margin-bottom: 1rem;
+    box-sizing: content-box;
+    width: 30%;
+    border: solid rgb(163, 163, 242) .5rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
 }
 
 .goalListItem {
@@ -21,15 +45,32 @@
     width: 30%;
     border: solid blue .5rem;
     padding: 1rem;
+    border-radius: 1.5rem;
 }
 
 #BG {
     background-image: var(--gradient);
     background-size: 200%;
-    animation: bg-animation 5s infinite alternate;
+    animation: bg-animation 20s infinite alternate;
 }
 
 @keyframes bg-animation {
     0% {background-position: left;}
     100% {background-position: right;}
+}
+
+#newGoalBttn {
+    border: 0;
+    padding: 0.5em 1.5em;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    background-image:  var(--gradient);
+    background-size:600%;
+    animation: bg-animation 3s infinite alternate
+}
+
+#newGoalBttn:hover {
+    background-image:  var(--gradient);
+    background-size: 200%;
+    animation: bg-animation 5s infinite alternate;
 }

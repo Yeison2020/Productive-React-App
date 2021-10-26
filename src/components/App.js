@@ -23,7 +23,10 @@ const App = () => {
       <div id="header">
         <h1>Productive</h1>
         <h3>Making you more productive</h3>
-      <button onClick={createNewGoal}>Create a New Goal</button>
+      <button id='newGoalBttn' 
+      onClick={createNewGoal}>
+        Create a New Goal
+      </button>
       </div>
 
       <Menu />

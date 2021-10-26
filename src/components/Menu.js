@@ -1,7 +1,7 @@
 
 function Menu() {
     return (
-        <div>
+        <div id="menu">
             <h3>Filter: completed or current</h3>
             <h3>Filter: total time</h3>
             <h3>Filter: by urgency</h3>

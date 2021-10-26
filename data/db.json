@@ -19,6 +19,46 @@
       "urgency": "Medium",
       "notes": "Went on a walk",
       "category": "Leisure"
+    },
+    {
+      "id": 3,
+      "name": "Go to the gym",
+      "completed": false,
+      "totalTime": 0,
+      "dueDate": "none",
+      "urgency": "Medium",
+      "notes": "track how much time you spend working out",
+      "category": "Fitness"
+    },
+    {
+      "id": 4,
+      "name": "Read a book",
+      "completed": false,
+      "totalTime": 100,
+      "dueDate": "1/10/2022",
+      "urgency": "Medium",
+      "notes": "Read the book for your book club",
+      "category": "Hobbies"
+    },
+    {
+      "id": 5,
+      "name": "Practice the piano",
+      "completed": false,
+      "totalTime": 275,
+      "dueDate": "none",
+      "urgency": "Low",
+      "notes": "Try and practice the piano 3 times a week for 1 hour (2 pomodoros). Current goal is to learn Moonlight Sonata",
+      "category": "Hobbies"
+    },
+    {
+      "id": 6,
+      "name": "Meditate",
+      "completed": false,
+      "totalTime": 1000,
+      "dueDate": "none",
+      "urgency": "high",
+      "notes": "Meditate daily for 25 minutes",
+      "category": "Wellness"
     }
   ]
 }
