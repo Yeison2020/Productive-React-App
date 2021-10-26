@@ -16,7 +16,7 @@ const App = () => {
   console.log(search);
 
   useEffect(() => {
-    fetch("http://localhost:6001/Goals")
+    fetch("http://localhost:3000/Goals")
       .then((r) => r.json())
       .then((goals) => setGoals(goals));
   }, []);
