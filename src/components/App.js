@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import GoalContainer from "./GoalContainer";
 import Menu from "./Menu";
+import Form from "./Form";
 
 const App = () => {
   const [goals, setGoals] = useState([]);
@@ -23,6 +24,25 @@ const App = () => {
 
   function createNewGoal() {
     console.log("create new goal");
+    //this will route to the new form page
+  }
+
+  function handleAddGoal(newGoalFormData) {
+    console.log(newGoalFormData);
+      // console.log(cake);
+      fetch('http://localhost:3000/goals', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newGoalFormData)
+      })
+      .then(res => res.json())
+      .then(data => {
+        setGoals([data, ...goals])
+        })
+      
+
   }
 
   const handleDataCard = (data) => {
@@ -57,6 +77,7 @@ const App = () => {
         <button id="newGoalBttn" onClick={createNewGoal}>
           Create a New Goal
         </button>
+        <Form handleAddGoal={handleAddGoal}/>
       </div>
 
       <Menu
