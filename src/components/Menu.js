@@ -26,7 +26,7 @@ function Menu({ handleSearch, goals, handleDataCard }) {
         />
       </form>
       <select name="filter" onChange={(e) => handleSelecterCategory(e)}>
-        <option value="Urgency">Filter</option>
+        <option value="filter">Filter</option>
         <option value="Urgency">High Urgency</option>
         <option value="NoCompleted">No Completed</option>
       </select>
