@@ -4,9 +4,10 @@
   font-family: Roboto;
 }
 
+
 :root {
-  --gradient: linear-gradient(45deg, #e3e37d, #de9696, #d7a2d3, #ffffff);
-  --gradient2: linear-gradient(45deg, #ffffff, #cbd8f5, #faf9c7, #e6b0b0);
+  --gradient: linear-gradient(45deg, #e8e87b, #f89b9b, #e79ee1, #ffffff);
+  --gradient2: linear-gradient(45deg,#cbd8f5, #faf9c7, #febdbd);
 
 }
 
@@ -66,7 +67,7 @@ input {
   margin-bottom: 1rem;
   box-sizing: content-box;
   width: 60%;
-  border: solid rgb(252, 170, 46) 0.75rem;
+  border: solid rgb(255, 255, 255) 0.75rem;
   padding: 1.5rem;
   border-radius: 1.5rem;
   /* grid-template-columns: repeat(5, 1fr);
@@ -78,14 +79,14 @@ input {
 }
 
 .goalListItem:hover {
-  border: solid red 0.75rem;
+  border: solid rgb(255, 121, 121) 0.75rem;
   transform: scale(1.06);
 }
 
 #BG {
   background-image: var(--gradient);
   background-size: 200%;
-  animation: bg-animation 20s infinite alternate;
+  animation: bg-animation 10s infinite alternate;
 }
 
 @keyframes bg-animation {
@@ -104,7 +105,7 @@ input {
   border-radius: 0.5rem;
   background-image: var(--gradient);
   background-size: 600%;
-  animation: bg-animation 3s infinite alternate;
+  animation: bg-animation 5s infinite alternate;
   transition-duration: 500ms;
   text-decoration: none;
   color: rgb(94, 94, 94);
