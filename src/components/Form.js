@@ -22,7 +22,7 @@ function Form({ handleAddGoal }) {
   }
 
   return (
-    <div>
+    <div id="newGoalForm">
       <form
         onSubmit={handleSubmit}
         style={{ display: "flex", flexDirection: "column" }}

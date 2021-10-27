@@ -6,11 +6,13 @@
 
 :root {
   --gradient: linear-gradient(45deg, #e3e37d, #de9696, #d7a2d3, #ffffff);
+  --gradient2: linear-gradient(45deg, #ffffff, #cbd8f5, #faf9c7, #e6b0b0);
+
 }
 
 #header {
   text-align: center;
-  margin: 1rem;
+  margin: 3rem;
   border: solid rgb(255, 255, 255) 0.5rem;
   padding: 1.5rem;
   border-radius: 1.5rem;
@@ -19,13 +21,30 @@
 }
 
 #menu {
-  margin-left: 0.25rem;
+
+  margin: auto;
   margin-bottom: 1rem;
   box-sizing: content-box;
   width: 30%;
-  border: solid rgb(163, 163, 242) 0.5rem;
+  border: solid rgb(255, 255, 255) 0.5rem;
   padding: 1rem;
   border-radius: 1.5rem;
+}
+
+input {
+    
+    padding: 0.25rem;
+    width: 50%;
+}
+
+#newGoalForm {
+    
+    width: 60%;
+    border: solid rgb(255, 255, 255) 0.5rem;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    margin: auto;
+    margin-bottom: 1rem;
 }
 
 #grid-container {
@@ -67,9 +86,6 @@
   background-image: var(--gradient);
   background-size: 200%;
   animation: bg-animation 20s infinite alternate;
-  /* grid-template-columns: repeat(5, 1fr);
-    grid-template-columns: 2fr 1fr 3fr;
-    grid-template-rows: 1fr 1fr; */
 }
 
 @keyframes bg-animation {
@@ -131,7 +147,7 @@
   margin-bottom: 1rem;
   box-sizing: content-box;
   width: 90%;
-  border: solid rgb(145, 199, 142) 0.75rem;
+  border: solid rgb(255, 255, 255) 0.75rem;
   padding: 1.5rem;
   border-radius: 1.5rem;
 
@@ -145,9 +161,12 @@
 }
 
 .goalCardName {
+  background-image: var(--gradient2);
+  background-size: 600%;
+  animation: bg-animation 8s infinite alternate;
   grid-column: 1/4;
   text-align: center;
-  margin-left: 1.5rem;
+  margin-left: 0.5rem;
   margin-bottom: 1rem;
   border: solid rgb(255, 255, 255) 0.5rem;
   border-radius: 1rem;
@@ -158,19 +177,17 @@
 
 .goalCardItem {
   text-align: center;
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
+  margin: 0.5rem;
   border: solid rgb(145, 199, 142) 0.5rem;
   border-radius: 1rem;
   text-decoration: none;
   color: rgb(94, 94, 94);
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
+
   box-sizing: content-box;
-  width: 90%;
-  border: solid rgb(106, 245, 118) 0.75rem;
-  padding: 1.5rem;
-  border-radius: 1.5rem;
+  width: 85%;
+  border: solid rgb(255, 255, 255) 0.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
 }
 
 #btn-goBack {

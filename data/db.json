@@ -49,29 +49,6 @@
       "urgency": "high",
       "notes": "Meditate daily for 25 minutes",
       "category": "wellness"
-    },
-    {
-      "name": "",
-      "completed": "",
-      "totalTime": "",
-      "dueDate": "",
-      "urgency": "",
-      "notes": "",
-      "category": "",
-      "id": 7
-<<<<<<< Updated upstream
-=======
-    },
-    {
-      "name": "Hello World",
-      "completed": "",
-      "totalTime": "",
-      "dueDate": "",
-      "urgency": "",
-      "notes": "",
-      "category": "",
-      "id": 9
->>>>>>> Stashed changes
     }
   ]
 }
