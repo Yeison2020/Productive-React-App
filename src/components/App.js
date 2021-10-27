@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import {Route, Switch, Link, NavLink} from 'react-router-dom'
 import GoalContainer from "./GoalContainer";
 import Menu from "./Menu";
 import Form from "./Form";
@@ -140,11 +141,20 @@ const App = () => {
         <h1>Productive</h1>
         <h3>Making you more productive</h3>
         <button id="newGoalBttn" onClick={createNewGoal}>
-          Create a New Goal
+          {/* Create a New Goal */}
+          <NavLink id="navlinkNew" to="/new"> Create a New Goal</NavLink>
         </button>
+<<<<<<< HEAD
         <Form handleAddGoal={handleAddGoal} />
+=======
+        
+>>>>>>> 5326130f9e0bec4c479366cbf8866e042b53a46a
       </div>
-
+      <Switch>
+        <Route path="/new">
+          <Form handleAddGoal={handleAddGoal}/>
+        </Route>
+      </Switch>
       <Menu
         handleSearch={handleSearch}
         goals={goals}
