@@ -75,7 +75,7 @@ function Form ({handleAddGoal}) {
                  <option value="low">low</option>
              </select>
              
-             <input
+             <textarea
              type="text"
              name="notes"
              aria-label="Notes"
@@ -83,7 +83,7 @@ function Form ({handleAddGoal}) {
              onChange={handleChange}
              placeholder="notes"
              >
-             </input>
+             </textarea>
              <label> Category </label>
              <select 
              value={formData.category}

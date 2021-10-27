@@ -99,6 +99,7 @@
     background-size:600%;
     animation: bg-animation 3s infinite alternate;
     transition-duration: 500ms;
+    
 }
 
 #newGoalBttn:hover {
@@ -115,7 +116,7 @@
     float: right;
     border: solid red .15rem;
     border-radius: 0.5rem;
-    transition-duration: 500ms;
+    transition-duration: 400ms;
 }
 
 #deleteBttn:hover {
@@ -125,4 +126,9 @@
     border: solid blue .2rem;
     border-radius: 0.5rem;
     transform: scale(1.2);
+}
+
+#navlinkNew {
+    text-decoration: none;
+    color: black
 }
