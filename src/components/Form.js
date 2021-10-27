@@ -1,4 +1,4 @@
-
+import {NavLink} from 'react-router-dom'
 import {useState} from 'react'
 
 function Form ({handleAddGoal}) {
@@ -98,7 +98,10 @@ function Form ({handleAddGoal}) {
             
              <br/>
 
-            <input type="submit"></input>
+            <button type="submit">
+                
+                <NavLink class="navlinkNew" to="./"> submit</NavLink>
+            </button>
 
          </form>
         </div>

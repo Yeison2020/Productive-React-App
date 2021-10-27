@@ -62,11 +62,6 @@ const App = () => {
       })
   }
 
-
-
-
-
-
   const handleDataCard = (data) => {
     setCategory(data);
   };
@@ -150,14 +145,17 @@ const App = () => {
         <h3>Making you more productive</h3>
         <button id="newGoalBttn" onClick={createNewGoal}>
           {/* Create a New Goal */}
-          <NavLink id="navlinkNew" to="/new"> Create a New Goal</NavLink>
+          <NavLink class="navlinkNew" to="/new"> Create a New Goal</NavLink>
         </button>
         
       </div>
       <Switch>
-        <Route path="/new">
+        <Route exact path="/new">
           <Form handleAddGoal={handleAddGoal}/>
         </Route>
+        {/* <Route path="/:id">
+          <GoalCard />
+        </Route> */}
       </Switch>
       <Menu
         handleSearch={handleSearch}
