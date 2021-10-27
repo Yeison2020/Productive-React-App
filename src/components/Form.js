@@ -51,7 +51,7 @@ function Form({ handleAddGoal }) {
           aria-label="Total Time"
           value={formData.totalTime}
           onChange={handleChange}
-          placeholder="total time"
+          placeholder="total Minutes"
         ></input>
         <input
           type="text"

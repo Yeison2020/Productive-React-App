@@ -4,11 +4,9 @@
   font-family: Roboto;
 }
 
-
 :root {
   --gradient: linear-gradient(45deg, #e8e87b, #f89b9b, #e79ee1, #ffffff);
-  --gradient2: linear-gradient(45deg,#cbd8f5, #faf9c7, #febdbd);
-
+  --gradient2: linear-gradient(45deg, #cbd8f5, #faf9c7, #febdbd);
 }
 
 #header {
@@ -22,7 +20,6 @@
 }
 
 #menu {
-
   margin: auto;
   margin-bottom: 1rem;
   box-sizing: content-box;
@@ -33,19 +30,17 @@
 }
 
 input {
-    
-    padding: 0.25rem;
-    width: 50%;
+  padding: 0.25rem;
+  width: 50%;
 }
 
 #newGoalForm {
-    
-    width: 60%;
-    border: solid rgb(255, 255, 255) 0.5rem;
-    border-radius: 1.5rem;
-    padding: 1rem;
-    margin: auto;
-    margin-bottom: 1rem;
+  width: 60%;
+  border: solid rgb(255, 255, 255) 0.5rem;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  margin: auto;
+  margin-bottom: 1rem;
 }
 
 #grid-container {
@@ -156,7 +151,6 @@ input {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.25rem;
   grid-auto-rows: minmax(3rem, auto);
-
   text-decoration: none;
   color: rgb(94, 94, 94);
 }
@@ -183,7 +177,6 @@ input {
   border-radius: 1rem;
   text-decoration: none;
   color: rgb(94, 94, 94);
-
   box-sizing: content-box;
   width: 85%;
   border: solid rgb(255, 255, 255) 0.5rem;
