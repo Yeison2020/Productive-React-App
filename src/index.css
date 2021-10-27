@@ -1,28 +1,15 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 * {
-    font-family: Roboto;
+  font-family: Roboto;
 }
 
 :root {
-
-    --gradient: linear-gradient(
-        45deg,
-        #e3e37d,
-
-        #de9696,
-
-        #d7a2d3,
-
-        #ffffff
-   
-    );
+  --gradient: linear-gradient(45deg, #e3e37d, #de9696, #d7a2d3, #ffffff);
 }
 
 #header {
+<<<<<<< Updated upstream
     text-align: center;
     margin: 1rem;
     border: solid rgb(255, 255, 255) .5rem;
@@ -31,19 +18,27 @@
     text-decoration: none;
     color: rgb(94, 94, 94)
     
+=======
+  text-align: center;
+  margin: 1rem;
+  border: solid rgb(255, 255, 255) 0.5rem;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+>>>>>>> Stashed changes
 }
 
 #menu {
-    margin-left: 0.25rem;
-    margin-bottom: 1rem;
-    box-sizing: content-box;
-    width: 30%;
-    border: solid rgb(163, 163, 242) .5rem;
-    padding: 1rem;
-    border-radius: 1.5rem;
+  margin-left: 0.25rem;
+  margin-bottom: 1rem;
+  box-sizing: content-box;
+  width: 30%;
+  border: solid rgb(163, 163, 242) 0.5rem;
+  padding: 1rem;
+  border-radius: 1.5rem;
 }
 
 #grid-container {
+<<<<<<< Updated upstream
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0.25rem;
@@ -55,43 +50,64 @@
     border: solid rgb(255, 255, 255) .5rem;
     padding: 1.5rem;
     border-radius: 1.5rem;
+=======
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.25rem;
+  grid-auto-rows: minmax(3rem, auto);
+  box-sizing: content-box;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+  border: solid rgb(255, 255, 255) 0.5rem;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+>>>>>>> Stashed changes
 }
 
 .goalListItem {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
-    box-sizing: content-box;
-    width: 60%;
-    border: solid rgb(252, 170, 46) .75rem;
-    padding: 1.5rem;
-    border-radius: 1.5rem;
-    /* grid-template-columns: repeat(5, 1fr);
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  box-sizing: content-box;
+  width: 60%;
+  border: solid rgb(252, 170, 46) 0.75rem;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  /* grid-template-columns: repeat(5, 1fr);
     grid-template-columns: 2fr 1fr 3fr;
+<<<<<<< Updated upstream
     grid-template-rows: 1fr 1fr; */ 
     transition-duration: 600ms;
     text-decoration: none;
     color: rgb(94, 94, 94)
 
+=======
+    grid-template-rows: 1fr 1fr; */
+  transition-duration: 600ms;
+>>>>>>> Stashed changes
 }
 
 .goalListItem:hover {
-    border: solid red .75rem;
-    transform: scale(1.06)
+  border: solid red 0.75rem;
+  transform: scale(1.06);
 }
 
-
 #BG {
-    background-image: var(--gradient);
-    background-size: 200%;
-    animation: bg-animation 20s infinite alternate;
-    /* grid-template-columns: repeat(5, 1fr);
+  background-image: var(--gradient);
+  background-size: 200%;
+  animation: bg-animation 20s infinite alternate;
+  /* grid-template-columns: repeat(5, 1fr);
     grid-template-columns: 2fr 1fr 3fr;
-    grid-template-rows: 1fr 1fr; */ 
+    grid-template-rows: 1fr 1fr; */
 }
 
 @keyframes bg-animation {
-    0% {background-position: left;}
-    100% {background-position: right;}
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
 }
 
 #newGoalBttn {
@@ -119,26 +135,26 @@
 }
 
 #deleteBttn {
-    background-color: rgba(84, 84, 84, 0.5);
-    color: white;
-    float: right;
-    border: solid red .15rem;
-    border-radius: 0.5rem;
-    transition-duration: 400ms;
+  background-color: rgba(84, 84, 84, 0.5);
+  color: white;
+  float: right;
+  border: solid red 0.15rem;
+  border-radius: 0.5rem;
+  transition-duration: 400ms;
 }
 
 #deleteBttn:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: black;
-    float: right;
-    border: solid blue .2rem;
-    border-radius: 0.5rem;
-    transform: scale(1.2);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  float: right;
+  border: solid blue 0.2rem;
+  border-radius: 0.5rem;
+  transform: scale(1.2);
 }
 
-.navlinkNew {
-    text-decoration: none;
-    color: black
+#navlinkNew {
+  text-decoration: none;
+  color: black;
 }
 
 .goalCard {
@@ -179,4 +195,34 @@
     border-radius: 1rem;
     text-decoration: none;
     color: rgb(94, 94, 94)
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  box-sizing: content-box;
+  width: 90%;
+  border: solid rgb(106, 245, 118) 0.75rem;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+}
+
+#btn-goBack {
+  color: black;
+  border: 0;
+  padding: 0.5em 1.5em;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  background-image: var(--gradient);
+  background-size: 600%;
+  animation: bg-animation 3s infinite alternate;
+  transition-duration: 500ms;
+}
+
+.remove-decoration {
+  text-decoration: none;
+}
+
+#btn-goBack:hover {
+  background-image: var(--gradient);
+  background-size: 200%;
+  animation: bg-animation 5s infinite alternate;
+  transform: scale(1.08);
 }

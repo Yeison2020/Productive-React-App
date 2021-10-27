@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { NavLink, Link } from "react-router-dom";
 
 function Form({ handleAddGoal }) {
   const [formData, setFormData] = useState({
@@ -93,6 +93,9 @@ function Form({ handleAddGoal }) {
 
         <input type="submit"></input>
       </form>
+      <Link to="/" className="remove-decoration">
+        <button id="btn-goBack">Go Back</button>
+      </Link>
     </div>
   );
 }

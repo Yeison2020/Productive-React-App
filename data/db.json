@@ -11,16 +11,6 @@
       "category": "work"
     },
     {
-      "id": 2,
-      "name": "Go for a walk",
-      "completed": true,
-      "totalTime": 25,
-      "dueDate": "Current 10/25/2021",
-      "urgency": "medium",
-      "notes": "Went on a walk",
-      "category": "leisure"
-    },
-    {
       "id": 3,
       "name": "Go to the gym",
       "completed": false,
@@ -69,6 +59,19 @@
       "notes": "",
       "category": "",
       "id": 7
+<<<<<<< Updated upstream
+=======
+    },
+    {
+      "name": "Hello World",
+      "completed": "",
+      "totalTime": "",
+      "dueDate": "",
+      "urgency": "",
+      "notes": "",
+      "category": "",
+      "id": 9
+>>>>>>> Stashed changes
     }
   ]
 }

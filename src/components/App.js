@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Route, Switch, Link, NavLink } from "react-router-dom";
+import { Route, Switch, Link, NavLink, Redirect } from "react-router-dom";
 import GoalContainer from "./GoalContainer";
 import Menu from "./Menu";
 import Form from "./Form";
@@ -159,6 +159,8 @@ const App = () => {
         <Route exact path="/:id">
           <GoalCard />
         </Route>
+        <Route exact path="/"></Route>
+        <Redirect to="/"></Redirect>
       </Switch>
       <Menu
         handleSearch={handleSearch}
