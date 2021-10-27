@@ -30,13 +30,22 @@
   border: solid rgb(255, 255, 255) 0.5rem;
   padding: 1rem;
   border-radius: 1.5rem;
+
+  
 }
 
-input {
-    
+#menu input, select {
+    margin: 0.25rem;
+    margin-left: 1rem;
     padding: 0.25rem;
-    width: 50%;
+    width: 80%;
+    border-radius: 0.5rem;    
+    /* margin:auto; */
+    background-color: rgb(255, 255, 255) ;
+    border: rgb(255, 255, 255) 0.5rem;
 }
+
+
 
 #newGoalForm {
     
@@ -47,6 +56,29 @@ input {
     margin: auto;
     margin-bottom: 1rem;
 }
+
+#newGoalForm input, select, textarea, label {
+    margin: 0.25rem;
+    margin-left: 1rem;
+    padding: 0.25rem;
+    width: 80%;
+    border-radius: 0.5rem;    
+    /* margin:auto; */
+    background-color: rgb(255, 255, 255) ;
+    border: rgb(255, 255, 255) 0.5rem;
+}
+
+form {
+    margin: auto;
+}
+
+/* #newGoalForm option {
+    margin: 0.25rem;
+    padding: 0.25rem;
+    width: 50%;
+    border-radius: 0.25rem;
+} */
+
 
 #grid-container {
   display: grid;
@@ -79,11 +111,12 @@ input {
 }
 
 .goalListItem:hover {
-  border: solid rgb(255, 121, 121) 0.75rem;
+  border: solid rgb(0, 8, 255) 0.75rem;
   transform: scale(1.06);
+  color: rgb(94, 94, 94);
 }
 
-#BG {
+body {
   background-image: var(--gradient);
   background-size: 200%;
   animation: bg-animation 10s infinite alternate;
@@ -192,6 +225,8 @@ input {
 }
 
 #btn-goBack {
+    /* align-items: center; */
+  margin-left: 1rem;
   color: black;
   border: 0;
   padding: 0.5em 1.5em;
@@ -202,6 +237,10 @@ input {
   animation: bg-animation 3s infinite alternate;
   transition-duration: 500ms;
 }
+
+
+
+
 
 .remove-decoration {
   text-decoration: none;
