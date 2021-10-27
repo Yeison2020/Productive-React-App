@@ -1,5 +1,6 @@
 import GoalList from "./GoalList";
 
+
 function GoalContainer({ goals, handleDelete }) {
   return (
     <div id="grid-container">

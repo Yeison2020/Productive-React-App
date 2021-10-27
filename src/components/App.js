@@ -3,6 +3,7 @@ import { Route, Switch, Link, NavLink } from "react-router-dom";
 import GoalContainer from "./GoalContainer";
 import Menu from "./Menu";
 import Form from "./Form";
+import GoalCard from "./GoalCard";
 
 const App = () => {
   const [goals, setGoals] = useState([]);
@@ -155,9 +156,9 @@ const App = () => {
         <Route exact path="/new">
           <Form handleAddGoal={handleAddGoal} />
         </Route>
-        {/* <Route path="/:id">
+        <Route exact path="/:id">
           <GoalCard />
-        </Route> */}
+        </Route>
       </Switch>
       <Menu
         handleSearch={handleSearch}
