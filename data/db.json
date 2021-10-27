@@ -82,13 +82,13 @@
       "id": 8
     },
     {
-      "name": "hey",
-      "completed": "true",
-      "totalTime": "test",
-      "dueDate": "test",
+      "name": "Heyy",
+      "completed": "",
+      "totalTime": "30",
+      "dueDate": "29/10/2021",
       "urgency": "medium",
-      "notes": "test",
-      "category": "wellness",
+      "notes": "Hello world",
+      "category": "hobbies",
       "id": 9
     },
     {
