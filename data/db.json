@@ -61,45 +61,14 @@
       "category": "wellness"
     },
     {
-      "name": "finish form",
+      "name": "",
       "completed": "",
-      "totalTime": "50",
-      "dueDate": "10/26/2021",
+      "totalTime": "",
+      "dueDate": "",
       "urgency": "",
-      "notes": "finish the form that i am typing into!",
+      "notes": "",
       "category": "",
       "id": 7
-    },
-    {
-      "name": "test",
-      "completed": "",
-      "totalTime": "test",
-      "dueDate": "test",
-      "urgency": "",
-      "notes": "test",
-      "category": "",
-      "": "fitness",
-      "id": 8
-    },
-    {
-      "name": "Heyy",
-      "completed": "",
-      "totalTime": "30",
-      "dueDate": "29/10/2021",
-      "urgency": "medium",
-      "notes": "Hello world",
-      "category": "hobbies",
-      "id": 9
-    },
-    {
-      "name": "hey",
-      "completed": "true",
-      "totalTime": "50",
-      "dueDate": "10/26/2021",
-      "urgency": "medium",
-      "notes": "asdefsdgrthyjukujghfgdfsdghgrf\ntwo lines!!!",
-      "category": "leisure",
-      "id": 10
     }
   ]
 }

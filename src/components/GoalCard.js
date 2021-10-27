@@ -26,14 +26,14 @@ function GoalCard() {
 const {name, urgency, category, completed, dueDate, notes, totalTime} = goal
   return (
     <div class="goalCard">
-      <h3>{name}</h3>
-      <p>Urgency: {urgency}</p>
-      <p>Category: {category}</p>
-      <p>Completed: {completed ? "Yes" : "No"}</p>
-      <p>Due Date: {dueDate}</p>
-      <p>Notes: {notes}</p>
-      <p>Total Time: {totalTime}</p>
-      <h1>testing</h1>
+      <h3 class="goalCardName" >{name}</h3>
+      <p class="goalCardItem">Completed: {completed ? "Yes" : "No"}</p>
+      <p class="goalCardItem">Urgency: {urgency}</p>
+      <p class="goalCardItem">Category: {category}</p>
+      <p class="goalCardItem">Due Date: {dueDate}</p>
+      <p class="goalCardItem">Notes: {notes}</p>
+      <p class="goalCardItem">Total Time: {totalTime}</p>
+      
     </div>
   );
 }
