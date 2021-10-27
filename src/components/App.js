@@ -27,44 +27,36 @@ const App = () => {
 
   function handleAddGoal(newGoalFormData) {
     console.log(newGoalFormData);
-      // console.log(cake);
-      fetch('http://localhost:3000/goals', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(newGoalFormData)
-      })
-      .then(res => res.json())
-      .then(data => {
-        setGoals([data, ...goals])
-        })
-      
-
+    // console.log(cake);
+    fetch("http://localhost:3000/goals", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newGoalFormData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setGoals([data, ...goals]);
+      });
   }
 
   function handleDelete(id) {
     console.log(id);
-    let result = window.confirm("are you sure you want to delete?")
+    let result = window.confirm("are you sure you want to delete?");
     if (result) {
-      handleDeleteConfirmed(id)
-    } 
+      handleDeleteConfirmed(id);
+    }
   }
 
   function handleDeleteConfirmed(id) {
     fetch(`http://localhost:3000/goals/${id}`, {
-        method: 'DELETE'
-      })
-      .then(()=> {
-        const filteredGoals = goals.filter(goal => goal.id !== id)
-        setGoals(filteredGoals)
-      })
+      method: "DELETE",
+    }).then(() => {
+      const filteredGoals = goals.filter((goal) => goal.id !== id);
+      setGoals(filteredGoals);
+    });
   }
-
-
-
-
-
 
   const handleDataCard = (data) => {
     setCategory(data);
@@ -150,7 +142,7 @@ const App = () => {
         <button id="newGoalBttn" onClick={createNewGoal}>
           Create a New Goal
         </button>
-        <Form handleAddGoal={handleAddGoal}/>
+        <Form handleAddGoal={handleAddGoal} />
       </div>
 
       <Menu
