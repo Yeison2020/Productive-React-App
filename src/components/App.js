@@ -130,6 +130,9 @@ const App = () => {
     }
     if (search === "" && category === "filter") {
       return goals;
+    }
+    if (search === "" && category !== "filter") {
+      return filterGoals();
     } else {
       return filterGoals();
     }
@@ -150,7 +153,7 @@ const App = () => {
       </div>
       <Switch>
         <Route exact path="/new">
-          <Form handleAddGoal={handleAddGoal}/>
+          <Form handleAddGoal={handleAddGoal} />
         </Route>
         {/* <Route path="/:id">
           <GoalCard />
