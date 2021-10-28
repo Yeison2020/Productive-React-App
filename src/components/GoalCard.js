@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Timer from "./Timer/Timer";
 
 function GoalCard() {
   const [goal, setGoal] = useState({});
@@ -59,9 +60,10 @@ function GoalCard() {
       <p className="goalCardItem">Category: {category}</p>
       <p className="goalCardItem">Due Date: {dueDate}</p>
       <p className="goalCardItem">Notes: {notes}</p>
-      <p className="goalCardItem">
+      {/* <p className="goalCardItem">
         Total Time: {h}h : {m}m : {s}s
-      </p>
+      </p> */}
+      <Timer className="goalCardItem" />
     </div>
   );
 }
