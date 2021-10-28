@@ -8,13 +8,22 @@ import GoalCard from "./GoalCard";
 const App = () => {
   const [goals, setGoals] = useState([]);
   const [search, setSearch] = useState("");
-
   const [category, setCategory] = useState("");
-
+  const [quotes, setQuotes] = useState([]);
   const handleSearch = (e, value) => {
     e.preventDefault();
     setSearch(value);
   };
+
+  const api_url = "http://api.quotable.io/random";
+
+  useEffect(() => {
+    fetch(api_url)
+      .then((resp) => resp.json())
+      .then((data) => {
+        setQuotes(data);
+      });
+  }, []);
 
   useEffect(() => {
     fetch("http://localhost:3000/Goals")
@@ -138,7 +147,6 @@ const App = () => {
       return filterGoals();
     }
   };
-
   return (
     <div id="BG">
       <div id="header">
@@ -151,6 +159,10 @@ const App = () => {
             Create a New Goal
           </NavLink>
         </button>
+        <br />
+        <br />
+        <p>" {quotes.content} "</p>
+        <p>Author: {quotes.author}</p>
       </div>
       <Switch>
         <Route exact path="/new">
