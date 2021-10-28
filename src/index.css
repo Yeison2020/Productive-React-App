@@ -137,6 +137,7 @@ body {
   transition-duration: 500ms;
   text-decoration: none;
   color: rgb(94, 94, 94);
+  margin: 1.25rem;
 }
 
 #newGoalBttn:hover {
@@ -172,6 +173,7 @@ body {
 }
 
 .goalCard {
+    font-size: 1.35rem;
   margin-left: 1.5rem;
   margin-bottom: 1rem;
   box-sizing: content-box;
@@ -182,13 +184,14 @@ body {
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0.25rem;
+  grid-gap: .5rem;
   grid-auto-rows: minmax(3rem, auto);
   text-decoration: none;
   color: rgb(94, 94, 94);
 }
 
 .goalCardName {
+    font-size: 2.5rem;
   background-image: var(--gradient2);
   background-size: 600%;
   animation: bg-animation 8s infinite alternate;
@@ -204,6 +207,7 @@ body {
 }
 
 .goalCardItem {
+    
   text-align: center;
   margin: 0.5rem;
   border: solid rgb(145, 199, 142) 0.5rem;
@@ -214,6 +218,8 @@ body {
   width: 85%;
   border: solid rgb(255, 255, 255) 0.5rem;
   padding: 0.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   border-radius: 1rem;
 }
 
@@ -241,3 +247,4 @@ body {
   animation: bg-animation 5s infinite alternate;
   transform: scale(1.08);
 }
+

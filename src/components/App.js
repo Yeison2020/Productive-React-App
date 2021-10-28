@@ -31,10 +31,6 @@ const App = () => {
       .then((goals) => setGoals(goals));
   }, []);
 
-  function createNewGoal() {
-    console.log("create new goal");
-    //this will route to the new form page
-  }
 
   function handleAddGoal(newGoalFormData) {
     console.log(newGoalFormData);
@@ -150,17 +146,15 @@ const App = () => {
   return (
     <div id="BG">
       <div id="header">
-        <h1>Productive</h1>
+        <h1>Productive™️</h1>
         <h3>Making you more productive</h3>
-        <button id="newGoalBttn" onClick={createNewGoal}>
+        <button id="newGoalBttn">
           {/* Create a New Goal */}
           <NavLink id="navlinkNew" to="/new">
             {" "}
             Create a New Goal
           </NavLink>
         </button>
-        <br />
-        <br />
         <p>" {quotes.content} "</p>
         <p>Author: {quotes.author}</p>
       </div>

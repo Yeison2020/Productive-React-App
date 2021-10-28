@@ -1,5 +1,5 @@
 .stopwatch {
-  padding: 0px 0px;
+  padding: 0rem 0rem;
   text-align: center;
 }
 .stopwatch span {
@@ -8,24 +8,24 @@
   animation: bg-animation 3s infinite alternate;
   color: black;
   display: inline-block;
-  font-size: 25px;
+  font-size: 1.25rem;
   border: 0;
   padding: 0.5em 1.5em;
   border-radius: 0.5rem;
-  width: 40px;
+  width: 4rem;
 }
 
 .stopwatch .stopwatch-btn {
   background-image: var(--gradient);
-  margin-top: 30px;
-  margin-left: 5px;
+  margin-top: 1rem;
   border: none;
-  padding: 12px 20px;
-  font-size: 16px;
+  padding: .75rem .75rem;
+  font-size: 1rem;
   text-transform: uppercase;
-  width: 150px;
+  width: 8rem;
   transition: background 1s;
   cursor: pointer;
+  border-radius: 0.5rem;
 }
 .stopwatch .stopwatch-btn-red {
   background-image: var(--gradient);
