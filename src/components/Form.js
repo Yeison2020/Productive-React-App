@@ -40,6 +40,7 @@ function Form({ handleAddGoal }) {
           onChange={handleChange}
           name="completed"
         >
+          <option value="false">completed: </option>  
           <option value="false">completed: no</option>
           <option value="true">completed: yes</option>
         </select>
@@ -60,6 +61,7 @@ function Form({ handleAddGoal }) {
           placeholder="due date"
         ></input>
         <select value={formData.urgency} onChange={handleChange} name="urgency">
+        <option value="high">urgency: </option>  
           <option value="high">urgency: high</option>
           <option value="medium">urgency: medium</option>
           <option value="low">urgency: low</option>
@@ -79,6 +81,7 @@ function Form({ handleAddGoal }) {
           name="category"
         >
           {" "}
+          <option value="work">category: </option>  
           <option value="work">category: work</option>
           <option value="leisure">category: leisure</option>
           <option value="fitness">category: fitness</option>
