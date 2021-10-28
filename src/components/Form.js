@@ -78,6 +78,7 @@ function Form({ handleAddGoal }) {
           onChange={handleChange}
           name="category"
         >
+          {" "}
           <option value="work">category: work</option>
           <option value="leisure">category: leisure</option>
           <option value="fitness">category: fitness</option>

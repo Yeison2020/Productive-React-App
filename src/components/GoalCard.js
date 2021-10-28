@@ -74,21 +74,22 @@ function GoalCard() {
     <div className="goalCard">
       <h3 className="goalCardName">{name}</h3>
       <p className="goalCardItem">
-        {completed ? "Completed  " : "Need Attention  "}
+        {completed ? "Status: Completed  " : "Status: Incomplete "}
         <button
           onClick={handleUpdateTask}
           className={completed ? "btn-task-Complete" : "btn-task-Completed"}
         >
-          {completed ? `Completed ` : "Complete "}{" "}
+          {" "}
+          {completed ? "Mark as incomplete" : "Mark as complete"}
           {completed ? (
             <img
               className="image-size-btn"
-              src="https://img.icons8.com/doodle/48/000000/checkmark.png"
+              src="https://img.icons8.com/emoji/48/000000/cross-mark-emoji.png"
             />
           ) : (
             <img
               className="image-size-btn"
-              src="https://img.icons8.com/emoji/48/000000/cross-mark-emoji.png"
+              src="https://img.icons8.com/doodle/48/000000/checkmark.png"
             />
           )}
         </button>
@@ -100,7 +101,7 @@ function GoalCard() {
           {
             <img
               className="image-size-calendar"
-              src="https://img.icons8.com/external-justicon-lineal-color-justicon/64/000000/external-calendar-calendar-amp-date-justicon-lineal-color-justicon-19.png"
+              src="https://img.icons8.com/ios/50/000000/overtime.png"
             />
           }{" "}
           {dueDate}
@@ -124,16 +125,14 @@ function GoalCard() {
           <button className="btn-Edit" onClick={handleEditInput}>
             <img
               className="image-size"
-              src="https://img.icons8.com/bubbles/50/000000/edit-property.png"
-            />{" "}
-            Edit
+              src="https://img.icons8.com/pastel-glyph/64/000000/edit--v2.png"
+            />
           </button>
           <button className="btn-Edit-Submit" onClick={(e) => handleNewNote(e)}>
             <img
               className="image-size"
-              src="https://img.icons8.com/external-bearicons-gradient-bearicons/64/000000/external-note-essential-collection-bearicons-gradient-bearicons.png"
+              src="https://img.icons8.com/external-bearicons-detailed-outline-bearicons/64/000000/external-Submit-miscellany-texts-and-badges-bearicons-detailed-outline-bearicons.png"
             />
-            Submit
           </button>
         </form>
       </div>
