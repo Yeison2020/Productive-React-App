@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Project Proposal",
-      "completed": true,
+      "completed": false,
       "totalTime": 50,
       "dueDate": "10/25/2021",
       "urgency": "high",
@@ -23,11 +23,11 @@
     {
       "id": 4,
       "name": "Read a book",
-      "completed": false,
+      "completed": true,
       "totalTime": 100,
       "dueDate": "1/10/2022",
       "urgency": "medium",
-      "notes": "Read the book for your book club",
+      "notes": "Hello world. Its working",
       "category": "hobbies"
     },
     {
@@ -49,16 +49,6 @@
       "urgency": "high",
       "notes": "Meditate daily for 25 minutes",
       "category": "wellness"
-    },
-    {
-      "name": "",
-      "completed": "",
-      "totalTime": "",
-      "dueDate": "",
-      "urgency": "",
-      "notes": "",
-      "category": "",
-      "id": 7
     }
   ]
 }

@@ -17,13 +17,13 @@ function BtnComponent(props) {
       {props.status === 1 ? (
         <div>
           <button
-            className="stopwatch-btn stopwatch-btn-red"
+            className="stopwatch-btn stopwatch-btn-red btn-red"
             onClick={props.stop}
           >
             Stop
           </button>
           <button
-            className="stopwatch-btn stopwatch-btn-yel"
+            className="stopwatch-btn stopwatch-btn-yel btn-yel"
             onClick={props.reset}
           >
             Reset
@@ -36,13 +36,13 @@ function BtnComponent(props) {
       {props.status === 2 ? (
         <div>
           <button
-            className="stopwatch-btn stopwatch-btn-gre"
+            className="stopwatch-btn stopwatch-btn-gre btn-red"
             onClick={props.resume}
           >
             Resume
           </button>
           <button
-            className="stopwatch-btn stopwatch-btn-yel"
+            className="stopwatch-btn stopwatch-btn-yel btn-yel"
             onClick={props.reset}
           >
             Reset

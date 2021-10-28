@@ -4,7 +4,10 @@ import Timer from "./Timer/Timer";
 
 function GoalCard() {
   const [goal, setGoal] = useState({});
-  const [timer, setTimer] = useState(0);
+  const [edit, setEdit] = useState(false);
+  const [noteValue, setNoteValue] = useState("");
+  const { name, urgency, category, completed, dueDate, notes, totalTime } =
+    goal;
 
   // const [isLoaded, setIsloaded] = useState(false);
 
@@ -24,42 +27,117 @@ function GoalCard() {
   }, [id]);
 
   // if(!isLoaded) return <h1>Loading</h1>
-  const { name, urgency, category, completed, dueDate, notes, totalTime } =
-    goal;
 
-  const secondsToTime = (secs) => {
-    if (secs > 1) {
-      let hours = Math.floor(secs / (60 * 60));
+  const handleUpdateTask = () => {
+    fetch(`http://localhost:3000/goals/${goal.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ completed: !completed }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setGoal(data);
+      });
+  };
 
-      let divisor_for_minutes = secs % (60 * 60);
-      let minutes = Math.floor(divisor_for_minutes / 60);
+  const handleEditInput = (e) => {
+    e.preventDefault();
+    setEdit(!edit);
+  };
 
-      let divisor_for_seconds = divisor_for_minutes % 60;
-      let seconds = Math.ceil(divisor_for_seconds);
-
-      let obj = {
-        h: hours,
-        m: minutes,
-        s: seconds,
-      };
-      return obj;
-    } else {
-      return { h: 0, m: 0, s: 0 };
+  const handleNewNote = (e) => {
+    if (edit) {
+      e.preventDefault();
+      fetch(`http://localhost:3000/goals/${goal.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ notes: noteValue }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          setGoal(data);
+        });
+      setEdit(!edit);
     }
   };
-  let seconds = totalTime * 60;
 
-  const { h, m, s } = secondsToTime(seconds);
-  secondsToTime(seconds);
+  const handleInputChange = (e) => {
+    setNoteValue(e.target.value);
+  };
 
   return (
     <div className="goalCard">
       <h3 className="goalCardName">{name}</h3>
-      <p className="goalCardItem">Completed: {completed ? "Yes" : "No"}</p>
+      <p className="goalCardItem">
+        {completed ? "Completed  " : "Need Attention  "}
+        <button
+          onClick={handleUpdateTask}
+          className={completed ? "btn-task-Complete" : "btn-task-Completed"}
+        >
+          {completed ? `Completed ` : "Complete "}{" "}
+          {completed ? (
+            <img
+              className="image-size-btn"
+              src="https://img.icons8.com/doodle/48/000000/checkmark.png"
+            />
+          ) : (
+            <img
+              className="image-size-btn"
+              src="https://img.icons8.com/emoji/48/000000/cross-mark-emoji.png"
+            />
+          )}
+        </button>
+      </p>
       <p className="goalCardItem">Urgency: {urgency}</p>
       <p className="goalCardItem">Category: {category}</p>
-      <p className="goalCardItem">Due Date: {dueDate}</p>
-      <p className="goalCardItem">Notes: {notes}</p>
+      <div className="goalCardItem-date">
+        <p id="center-due-date">
+          {
+            <img
+              className="image-size-calendar"
+              src="https://img.icons8.com/external-justicon-lineal-color-justicon/64/000000/external-calendar-calendar-amp-date-justicon-lineal-color-justicon-19.png"
+            />
+          }{" "}
+          {dueDate}
+        </p>
+      </div>
+
+      <div className="goalCardItem">
+        <form>
+          {edit ? (
+            <textarea
+              id="inputChange"
+              type="text"
+              name="notes"
+              className="edit-input"
+              value={noteValue}
+              onChange={(e) => handleInputChange(e)}
+            ></textarea>
+          ) : (
+            <p>Notes: {notes}</p>
+          )}
+          <button className="btn-Edit" onClick={handleEditInput}>
+            <img
+              className="image-size"
+              src="https://img.icons8.com/bubbles/50/000000/edit-property.png"
+            />{" "}
+            Edit
+          </button>
+          <button className="btn-Edit-Submit" onClick={(e) => handleNewNote(e)}>
+            <img
+              className="image-size"
+              src="https://img.icons8.com/external-bearicons-gradient-bearicons/64/000000/external-note-essential-collection-bearicons-gradient-bearicons.png"
+            />
+            Submit
+          </button>
+        </form>
+      </div>
+
       {/* <p className="goalCardItem">
         Total Time: {h}h : {m}m : {s}s
       </p> */}

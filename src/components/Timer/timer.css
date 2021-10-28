@@ -19,7 +19,7 @@
   background-image: var(--gradient);
   margin-top: 1rem;
   border: none;
-  padding: .75rem .75rem;
+  padding: 0.75rem 0.75rem;
   font-size: 1rem;
   text-transform: uppercase;
   width: 8rem;
@@ -34,6 +34,14 @@
   transition-duration: 500ms;
   border: 2px solid #c85454;
   color: black;
+}
+
+.btn-red {
+  margin-right: 0.5rem;
+}
+
+.btn-yel {
+  margin-left: 0.5rem;
 }
 .stopwatch .stopwatch-btn-yel {
   background-image: var(--gradient);

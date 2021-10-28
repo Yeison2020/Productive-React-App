@@ -64,6 +64,17 @@ label {
   border: rgb(255, 255, 255) 0.5rem;
 }
 
+.edit-input {
+  margin: 0.25rem;
+  margin-left: 1rem;
+  padding: 0.25rem;
+  width: 80%;
+  border-radius: 0.5rem;
+  /* margin:auto; */
+  background-color: rgb(255, 255, 255);
+  border: rgb(255, 255, 255) 0.5rem;
+}
+
 form {
   margin: auto;
 }
@@ -171,7 +182,7 @@ body {
 }
 
 .goalCard {
-    font-size: 1.35rem;
+  font-size: 1.35rem;
   margin-left: 1.5rem;
   margin-bottom: 1rem;
   box-sizing: content-box;
@@ -182,14 +193,14 @@ body {
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: .5rem;
+  grid-gap: 0.5rem;
   grid-auto-rows: minmax(3rem, auto);
   text-decoration: none;
   color: rgb(94, 94, 94);
 }
 
 .goalCardName {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
   background-image: var(--gradient2);
   background-size: 600%;
   animation: bg-animation 8s infinite alternate;
@@ -204,10 +215,31 @@ body {
   padding: 1rem;
 }
 
+.goalCardItem-date {
+  /* text-align: center; */
+  margin: 0.5rem;
+  border: solid rgb(145, 199, 142) 0.5rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: rgb(94, 94, 94);
+  box-sizing: content-box;
+  width: 85%;
+  border: solid rgb(255, 255, 255) 0.5rem;
+  padding: 0.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 1rem;
+  justify-content: center;
+  display: grid;
+}
+
+#center-due-date {
+  margin-top: 40%;
+}
+
 .goalCardItem {
-    
   text-align: center;
-  margin: .5rem;
+  margin: 0.5rem;
   border: solid rgb(145, 199, 142) 0.5rem;
   border-radius: 1rem;
   text-decoration: none;
@@ -246,3 +278,66 @@ body {
   transform: scale(1.08);
 }
 
+.btn-task-Completed {
+  background-image: var(--gradient);
+  background-size: 200%;
+  animation: bg-animation 5s infinite alternate;
+  transform: scale(1.08);
+  margin-left: 15px;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+}
+
+.btn-task-Completed:hover {
+  background: #00aba9;
+
+  color: black;
+}
+
+.btn-task-Complete {
+  background-image: var(--gradient);
+  background-size: 200%;
+  animation: bg-animation 5s infinite alternate;
+  transform: scale(1.08);
+  margin-left: 15px;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+}
+.btn-task-Complete:hover {
+  background: #b1e693;
+  color: black;
+}
+
+.btn-Edit {
+  background-image: var(--gradient);
+  background-size: 200%;
+  animation: bg-animation 5s infinite alternate;
+  transform: scale(1.08);
+  font-size: 0.6rem;
+  border-radius: 0.7rem;
+  margin-right: 1rem;
+}
+.btn-Edit-Submit {
+  background-image: var(--gradient);
+  background-size: 200%;
+  animation: bg-animation 5s infinite alternate;
+  transform: scale(1.08);
+  font-size: 0.6rem;
+  border-radius: 0.7rem;
+  margin-left: 1rem;
+}
+
+.image-size {
+  height: 2rem;
+}
+
+.image-size-btn {
+  height: 1.6rem;
+  width: 1.3rem;
+}
+
+.stop-watch-message {
+  margin-top: 0.5rem;
+}
+.image-size-calendar {
+}

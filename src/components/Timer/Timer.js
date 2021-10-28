@@ -65,6 +65,13 @@ function Timer() {
           start={start}
         />
       </div>
+      <div className="stop-watch-message">
+        <p>Please Take a break After 25 minutes</p>
+        <img
+          className="image-size"
+          src="https://img.icons8.com/emoji/48/000000/man-in-lotus-position.png"
+        />
+      </div>
     </div>
   );
 }
