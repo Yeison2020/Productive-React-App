@@ -126,7 +126,7 @@ body {
   }
 }
 
-#newGoalBttn {
+.newGoalBttn {
   border: 0;
   padding: 0.5em 1.5em;
   font-size: 1.5rem;
@@ -136,17 +136,15 @@ body {
   animation: bg-animation 5s infinite alternate;
   transition-duration: 500ms;
   text-decoration: none;
-  color: rgb(94, 94, 94);
   margin: 1.25rem;
 }
 
-#newGoalBttn:hover {
+.newGoalBttn:hover {
   background-image: var(--gradient);
   background-size: 200%;
   animation: bg-animation 5s infinite alternate;
   transform: scale(1.08);
   text-decoration: none;
-  color: rgb(94, 94, 94);
 }
 
 #deleteBttn {
@@ -209,7 +207,7 @@ body {
 .goalCardItem {
     
   text-align: center;
-  margin: 0.5rem;
+  margin: .5rem;
   border: solid rgb(145, 199, 142) 0.5rem;
   border-radius: 1rem;
   text-decoration: none;

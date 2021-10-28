@@ -4,26 +4,20 @@ import GoalContainer from "./GoalContainer";
 import Menu from "./Menu";
 import Form from "./Form";
 import GoalCard from "./GoalCard";
+import Quote from "./Quote";
 
 const App = () => {
   const [goals, setGoals] = useState([]);
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("");
-  const [quotes, setQuotes] = useState([]);
+  const [motivation, setMotivation] = useState(false)
+  
   const handleSearch = (e, value) => {
     e.preventDefault();
     setSearch(value);
   };
 
-  const api_url = "http://api.quotable.io/random";
 
-  useEffect(() => {
-    fetch(api_url)
-      .then((resp) => resp.json())
-      .then((data) => {
-        setQuotes(data);
-      });
-  }, []);
 
   useEffect(() => {
     fetch("http://localhost:3000/Goals")
@@ -63,6 +57,10 @@ const App = () => {
       const filteredGoals = goals.filter((goal) => goal.id !== id);
       setGoals(filteredGoals);
     });
+  }
+
+  function handleQuote() {
+    setMotivation(!motivation)
   }
 
   const handleDataCard = (data) => {
@@ -148,15 +146,17 @@ const App = () => {
       <div id="header">
         <h1>Productive™️</h1>
         <h3>Making you more productive</h3>
-        <button id="newGoalBttn">
+        <button className="newGoalBttn">
           {/* Create a New Goal */}
           <NavLink id="navlinkNew" to="/new">
             {" "}
             Create a New Goal
           </NavLink>
         </button>
-        <p>" {quotes.content} "</p>
-        <p>Author: {quotes.author}</p>
+        <button className="newGoalBttn" onClick={handleQuote}>
+          I need motivation!
+        </button>
+        {motivation? <Quote/> : null}
       </div>
       <Switch>
         <Route exact path="/new">

@@ -90,7 +90,7 @@ function Form({ handleAddGoal }) {
         <input class="submitBttn" type="submit"></input>
       </form>
       <Link to="/" className="remove-decoration">
-        <button id="btn-goBack">Go Back</button>
+        <button id="btn-goBack">close form</button>
       </Link>
     </div>
   );
