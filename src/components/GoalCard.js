@@ -22,7 +22,7 @@ function GoalCard() {
         console.log(data);
         setGoal(data);
         // setIsLoaded(true)
-        window.scrollTo(0, 250);
+        window.scrollTo(0, 320);
       });
   }, [id]);
 

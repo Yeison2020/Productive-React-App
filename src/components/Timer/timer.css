@@ -73,6 +73,8 @@
 }
 
 .timeSpan {
+  text-align: center;
   display: flex;
   flex-wrap: nowrap;
+  
 }
