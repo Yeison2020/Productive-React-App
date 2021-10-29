@@ -47,7 +47,7 @@
       "totalTime": 1000,
       "dueDate": "none",
       "urgency": "high",
-      "notes": "Meditate daily for 25 minutes",
+      "notes": "",
       "category": "wellness"
     },
     {
@@ -119,16 +119,6 @@
       "notes": "2 non-technical blogs, need 4 technical blogs now",
       "category": "work",
       "id": 14
-    },
-    {
-      "name": "start ruby",
-      "completed": false,
-      "totalTime": "",
-      "dueDate": "11/01/2021",
-      "urgency": "high",
-      "notes": "learn some ruby",
-      "category": "work",
-      "id": 15
     }
   ]
 }
